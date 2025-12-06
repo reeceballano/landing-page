@@ -1,7 +1,9 @@
 const Hero = ({ hero, children }) => {
     return (
         <div className="hero">
-            {children}
+            <div className="@container">
+                {children}
+            </div>
         </div>
     )
 }
