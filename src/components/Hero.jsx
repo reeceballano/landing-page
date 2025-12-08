@@ -1,11 +1,12 @@
+import Container from "./Container";
 import Section from "./Section";
 
 const Hero = ({ hero, children }) => {
     return (
         <Section bg="bg-green-50">
-            <div className="container">
+            <Container>
                 {children}
-            </div>
+            </Container>
         </Section>
     )
 }
