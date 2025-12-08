@@ -1,10 +1,12 @@
+import Section from "./Section";
+
 const Hero = ({ hero, children }) => {
     return (
-        <div className="hero">
-            <div className="@container">
+        <Section bg="bg-green-50">
+            <div className="container">
                 {children}
             </div>
-        </div>
+        </Section>
     )
 }
 
