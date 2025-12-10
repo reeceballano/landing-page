@@ -1,5 +1,6 @@
 import Container from "./Container";
 import logo from "../assets/logo.svg";
+import { Menu } from "lucide-react";
 
 const Header = () => {
     return (
@@ -21,8 +22,15 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="mobile-nav block md:hidden">
-                    mobile nav
+                <div className="mobile-nav flex items-center md:hidden justify-between">
+                    <div className="mobile-logo-container flex items-center">
+                        <img className="h-20" src={logo} alt="logo" />
+                        <h1 className="text-md uppercase font-bold text-slate-700">Ninja <span className="text-green-400">Dev</span></h1>
+                    </div>
+
+                    <div className="mobile-nav-container">
+                        <Menu className="h-8 w-8 text-slate-900 cursor-pointer" />
+                    </div>
                 </div>
 
             </Container>
