@@ -39,11 +39,17 @@ const Header = () => {
                     </div>
 
                     {
-                    <div className={`mobile-nav-container overflow-hidden bg-slate-300/80 px-5 transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100 py-5' : 'max-h-0 opacity-0 py-0'}`}>                        <nav className="space-x-3 text-base uppercase font-semibold text-slate-700 tracking-wide">
-                            <a className="block py-2 my-2 border-b border-slate-400" href="#">Home</a>
-                            <a className="block py-2 my-2 border-b border-slate-400" href="#">About</a>
-                            <a className="block py-2 my-2 border-b border-slate-400" href="#">Products</a>
-                            <a className="block py-2 my-2 border-b border-slate-400" href="#">Contact</a>
+                    <div className={`
+                        mobile-nav-container overflow-hidden bg-slate-900/80 px-5 
+                        rounded 
+                        transition-all duration-300 
+                        ${isOpen ? 'max-h-96 opacity-100 py-5' : 'max-h-0 opacity-0 py-0'}`
+                    }>                        
+                        <nav className="space-x-3 text-base uppercase font-semibold text-slate-100 tracking-wide">
+                            <a className="block py-2 my-2 border-b border-slate-700" href="#">Home</a>
+                            <a className="block py-2 my-2 border-b border-slate-700" href="#">About</a>
+                            <a className="block py-2 my-2 border-b border-slate-700" href="#">Products</a>
+                            <a className="block py-2 my-2 border-b border-slate-700" href="#">Contact</a>
                         </nav>
                     </div>
                     }
