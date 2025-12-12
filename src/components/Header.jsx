@@ -38,7 +38,6 @@ const Header = () => {
                         }
                     </div>
 
-                    {
                     <div className={`
                         mobile-nav-container overflow-hidden bg-slate-900/80 px-5 
                         rounded 
@@ -52,7 +51,6 @@ const Header = () => {
                             <a className="block py-2 my-2 border-b border-slate-700" href="#">Contact</a>
                         </nav>
                     </div>
-                    }
                 </div>
 
             </Container>
