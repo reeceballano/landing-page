@@ -7,7 +7,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className="main-header">
+        <section className="main-header border-b border-slate-100 fixed top-0 bg-slate-50/96 w-full">
             <Container>
                 <div className="desktop-nav hidden md:flex justify-between">
                     <div className="logo-container flex space-x-1 items-center">

@@ -6,6 +6,9 @@ const App = () => {
         <div className="app">
             <Header />
             <Hero />
+            <div className="h-screen">
+
+            </div>
         </div>
     )
 }
