@@ -16,11 +16,26 @@ const Header = () => {
                     </div>
 
                     <div className="nav-container flex items-center">
-                        <nav className="space-x-3 text-xs uppercase font-semibold text-slate-700 tracking-wide">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Products</a>
-                        <a href="#">Contact</a>
+                        <nav className="space-x-3 text-xs uppercase font-medium text-slate-700 tracking-widest flex list-none">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li className="relative">Solutions
+                                <nav className="sub-menu bg-slate-200 p-5">
+                                    <li>
+                                        <a href="#">Desktop</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Mobile</a>
+                                    </li>
+                                </nav>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
                         </nav>
                     </div>
                 </div>
