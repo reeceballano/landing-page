@@ -2,9 +2,19 @@ import Container from "./Container";
 import logo from "../assets/logo.svg";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import SubMenu from "./Navigation/SubMenu";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [links, setLinks] = useState([
+        { id: 1, title: 'Home', url: '#' },
+        { id: 2, title: 'About', url: '#' },
+        { id: 3, title: 'Solutions', url: '#', submenu: [
+            { id: 31, title: 'Mobile', url: '#' },
+            { id: 32, title: 'Desktop', url: '#' },
+        ] },
+        { id: 4, title: 'Contact', url: '#' },
+    ])
 
     return (
         <section className="main-header border-b border-slate-100 fixed top-0 bg-slate-50/96 w-full">
@@ -17,25 +27,40 @@ const Header = () => {
 
                     <div className="nav-container flex items-center">
                         <nav className="space-x-3 text-xs uppercase font-medium text-slate-700 tracking-widest flex list-none">
-                            <li>
+                            {
+                                links.length &&
+                                    links.map(item => {
+                                        return  <div key={item.id} className="relative">
+                                                    {
+                                                        item.submenu
+                                                            ? <li>{item.title}<SubMenu links={item.submenu} /></li>
+                                                            : <li><a href={item.url}>{item.title}</a></li>
+                                                    }
+                                                </div>
+                                    })
+                            }
+                            {/* <li>
                                 <a href="#">Home</a>
                             </li>
                             <li>
                                 <a href="#">About</a>
                             </li>
                             <li className="relative">Solutions
-                                <nav className="sub-menu bg-slate-200 p-5">
-                                    <li>
+                                <nav className="sub-menu bg-slate-200/95 p-5 absolute min-w-60 top-5 right-0 rounded">
+                                    <li className="border-b border-slate-300 mb-2 pb-2">
                                         <a href="#">Desktop</a>
                                     </li>
-                                    <li>
+                                    <li className="border-b border-slate-300 mb-2 pb-2">
                                         <a href="#">Mobile</a>
+                                    </li>
+                                    <li className="border-b border-slate-300 mb-2 pb-2">
+                                        <a href="#">This is a long item</a>
                                     </li>
                                 </nav>
                             </li>
                             <li>
                                 <a href="#">Contact</a>
-                            </li>
+                            </li> */}
                         </nav>
                     </div>
                 </div>
