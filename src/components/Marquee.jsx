@@ -1,23 +1,20 @@
 import Container from "./Container";
 
 const Marquee = () => {
-    return <Container>
-        <div className="marquee-items w-full flex flex-row shrink-0 overflow-hidden animate-marquee">
-            <div className="marquee-item basis-2/4">Item 1</div>
-            <div className="marquee-item basis-2/4">Item 2</div>
-            <div className="marquee-item basis-2/4">Item 3</div>
-            <div className="marquee-item basis-2/4">Item 4</div>
-            <div className="marquee-item basis-2/4">Item 5</div>
-            <div className="marquee-item basis-2/4">Item 6</div>
-            <div className="marquee-item basis-2/4">Item 1</div>
-            <div className="marquee-item basis-2/4">Item 2</div>
-            <div className="marquee-item basis-2/4">Item 3</div>
-            <div className="marquee-item basis-2/4">Item 4</div>
-            <div className="marquee-item basis-2/4">Item 5</div>
-            <div className="marquee-item basis-2/4">Item 6</div>
+    return (
+        <Container>
+            <div className="text-slate-700 overflow-hidden min-w-full">
+                <div className="marquee-items animate-marquee flex gap-10">
+                    {
+                        [...Array(100)].map((item, index) => {
+                            return <div key={item} className="marquee-item w-2xs flex flex-1">Item {index}</div>
 
-        </div>
-    </Container>
+                        })
+                    }
+                </div>
+            </div>
+        </Container>
+    )
 }
 
 export default Marquee;
