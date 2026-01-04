@@ -7,9 +7,7 @@ const App = () => {
         <div className="app">
             <Header />
             <Hero />
-            <section>
-                <Marquee />
-            </section>
+            <Marquee />
             <div className="h-screen">
 
             </div>
