@@ -9,7 +9,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className="main-header border-b border-slate-100 fixed top-0 bg-slate-50/96 w-full">
+        <section className="main-header border-b border-slate-100 fixed top-0 bg-slate-50/96 w-full z-50">
             <Container>
                 <MainNavDesktop />
                 <div className="mobile-nav md:hidden">

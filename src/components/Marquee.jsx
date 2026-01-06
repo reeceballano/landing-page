@@ -21,7 +21,7 @@ const Marquee = () => {
                     <div className="marquee-items animate-marquee flex gap-10">
                         {
                             [...logos, ...logos].map((item, index) => {
-                                return <div key={item} className="marquee-item flex-none basis-28">
+                                return <div key={index} className="marquee-item flex-none basis-28">
                                     <img src={item} className="w-10" />
                                 </div>
                             })
