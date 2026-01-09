@@ -15,9 +15,10 @@ const logos = [Amazon, Apple, Bmw, Chanel, Docker, Forbes, GoPro, Heineken, McDo
 
 const Marquee = () => {
     return (
-        <section className="bg-green-100">
+        <section className="bg-white-50">
             <Container>
-                <div className="text-slate-700 overflow-hidden min-w-full">
+                <div className="text-slate-700 overflow-hidden min-w-full relative ">
+                    <div className="absolute left-0 top-0 z-10 h-full w-56 bg-linear-to-r from-white to-transparent"></div>
                     <div className="marquee-items animate-marquee flex gap-10">
                         {
                             [...logos, ...logos].map((item, index) => {
@@ -27,6 +28,7 @@ const Marquee = () => {
                             })
                         }
                     </div>
+                    <div className="absolute right-0 top-0 z-10 h-full w-56 bg-linear-to-l from-white to-transparent"></div>
                 </div>
             </Container>
         </section>

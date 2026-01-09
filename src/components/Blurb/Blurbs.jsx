@@ -7,7 +7,7 @@ const Blurbs = ({ blurbs }) => {
         { id: 3, icon: 'terminal', background: "green", title: "Deploy", description: "Personalize your offer and sell your product or offer directly in the funnel without further tools."},
     ]
     return (
-        <div className="blurbs flex flex-col md:flex-row gap-5 justify-around my-5">
+        <div className="blurbs md:w-4/5 md:mx-auto flex flex-col md:flex-row gap-5 my-5 justify-around">
             {
                 blurbs &&
                     blurbs.map(item => {

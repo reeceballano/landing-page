@@ -5,7 +5,7 @@ const BlurbItem = ({
     title, description
 }) => {
     return (
-        <div className="blurb border border-gray-200 flex-1 rounded-xl p-5 text-center flex flex-col items-center">
+        <div className="blurb border border-gray-100 flex-1 rounded-xl p-5 text-center flex flex-col items-center shadow-md">
             <div className={`w-28 h-28 rounded-full bg-${background}-400 border border-gray-200 flex items-center justify-center`}>
                 <CustomIcon name={icon} size={size} color={color}/>
             </div>
