@@ -15,7 +15,7 @@ const App = () => {
             <Marquee />
             <Section bg="bg-white">
                 <Container classes={"bg-stone-50 rounded-lg"}>
-                    <div className="image-text flex gap-9">
+                    <div className="image-text flex flex-col md:flex-row gap-9">
                         <div className="image-container md:w-2/5">
                             <img className="rounded-lg" src={laptop} alt="laptop" />
                         </div>
