@@ -3,7 +3,7 @@ import Section from "./Section";
 
 const Hero = ({ hero, children }) => {
     return (
-        <Section bg="bg-stone-50 md:min-h-[calc(100dvh-100px)] mt-[100px] flex items-center">
+        <Section classes="md:min-h-[calc(100dvh-100px)] mt-[100px] flex items-center">
             <Container>
                     <div className="flex md:flex-row flex-col justify-center items-center gap-10">
                         <div className="hero-content md:flex-1">

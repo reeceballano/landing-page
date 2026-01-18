@@ -1,7 +1,7 @@
-const Section = ({ bg, children }) => {
+const Section = ({ classes, children }) => {
 
     return (
-        <section className={`section main-section ${bg}`}>
+        <section className={`section main-section ${classes}`}>
             { children}
         </section>
     )
