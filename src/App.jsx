@@ -13,6 +13,7 @@ const App = () => {
             <Header />
             <Hero />
             <Marquee />
+            
             <Section bg="bg-white">
                 <Container classes={"bg-stone-50 rounded-lg"}>
                     <div className="image-text flex flex-col md:flex-row gap-9">
@@ -30,6 +31,7 @@ const App = () => {
                     </div>
                 </Container>
             </Section>
+            
             <Section>
                 <Container>
                     <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">We Deliver Results</h1>
@@ -39,6 +41,14 @@ const App = () => {
                         <Blurbs />
                         <Blurbs />
                     </div>
+                </Container>
+            </Section>
+            
+            <Section>
+                <Container>
+                    <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">Clients Testimonials</h1>
+                    <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>
+
                 </Container>
             </Section>
             <div className="h-screen">
