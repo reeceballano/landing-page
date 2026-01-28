@@ -6,6 +6,7 @@ import Marquee from "./components/Marquee";
 import Section from "./components/Section";
 import Blurbs from "./components/Blurb/Blurbs";
 import laptop from "../src/assets/images/laptop.jpg";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 const App = () => {
     return (
@@ -44,11 +45,14 @@ const App = () => {
                 </Container>
             </Section>
             
-            <Section>
+            <Section classes={"bg-slate-950"}>
                 <Container>
-                    <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">Clients Testimonials</h1>
-                    <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>
-
+                    <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center text-white">Clients Testimonials</h1>
+                    <h3 className="text-xl/9 md:text-2xl/9 text-white font-light text-center">We are a team of ninjas!</h3>
+                    
+                    <div className="mt-11">
+                        <Testimonials />
+                    </div>
                 </Container>
             </Section>
             <div className="h-screen">
