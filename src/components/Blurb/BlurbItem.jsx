@@ -11,7 +11,7 @@ const BlurbItem = ({
     }
 
     return (
-        <Card>
+        <Card border>
             <div style={style} className={`w-28 h-28 rounded-full border border-gray-200 flex items-center justify-center`}>
                 <CustomIcon name={icon} size={size} color={color}/>
             </div>
