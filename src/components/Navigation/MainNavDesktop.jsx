@@ -11,9 +11,15 @@ const MainNavDesktop = () => {
             { id: 32, title: 'Desktop', url: '#' },
         ] },
         { id: 4, title: 'Contact', url: '#' },
+        { id: 5, title: 'With Sub', url: '#', submenu: [
+            { id: 51, title: 'Mobile', url: '#' },
+            { id: 52, title: 'Desktop', url: '#' },
+        ] },
     ])
 
     const [isOpen, setIsOpen] = useState(false);
+
+    const [menuId, setMenuId] = useState(null);
 
     return (
         <div className="desktop-nav hidden md:flex justify-between">
@@ -27,15 +33,22 @@ const MainNavDesktop = () => {
                     {
                         links.length &&
                             links.map(item => {
-                                return  <div key={item.id} className="relative">
+                                return  <>
                                             {
                                                 item.submenu
-                                                    ?   <li onMouseOver={() => setIsOpen(true)}>{item.title}
-                                                            { isOpen && <SubMenu links={item.submenu} /> }
+                                                    ?   <li 
+                                                            onMouseOver={() => setMenuId(item.id)}
+                                                            onMouseLeave={() => setMenuId(null)}
+                                                        >
+                                                            <div className="relative">
+                                                                {item.title}
+                                                                { (menuId === item.id) && <SubMenu links={item.submenu} /> }
+
+                                                            </div>
                                                         </li>
                                                     :   <li><a href={item.url}>{item.title}</a></li>
                                             }
-                                        </div>
+                                        </>
                             })
                     }
                 </nav>
