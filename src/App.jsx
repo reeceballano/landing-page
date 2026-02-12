@@ -7,8 +7,15 @@ import Section from "./components/Section";
 import Blurbs from "./components/Blurb/Blurbs";
 import laptop from "../src/assets/images/laptop.jpg";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Carousel from "./components/Carousel/Carousel";
 
 const App = () => {
+    const slides = [
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+        "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+    ];
+
     return (
         <div className="app">
             <Header />
@@ -56,7 +63,9 @@ const App = () => {
                 </Container>
             </Section>
             <div className="h-screen">
-
+                <Container>
+                    <Carousel slides={slides} autoPlay interval={4000} />
+                </Container>
             </div>
         </div>
     )
