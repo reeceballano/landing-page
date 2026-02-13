@@ -11,8 +11,8 @@ const Testimonials = () => {
         <div className="testimonials flex">
             {
                 testimonialsData &&
-                    testimonialsData.map((item) => {
-                        return <TestimonialItem key={item} testimonial={item}/>
+                    testimonialsData.map((item,i) => {
+                        return <TestimonialItem key={i} testimonial={item}/>
                     })
             }
         </div>

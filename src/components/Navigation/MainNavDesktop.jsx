@@ -32,23 +32,23 @@ const MainNavDesktop = () => {
                 <nav className="space-x-3 text-xs uppercase font-medium text-slate-700 tracking-widest flex list-none">
                     {
                         links.length &&
-                            links.map(item => {
-                                return  <>
-                                            {
-                                                item.submenu
-                                                    ?   <li 
-                                                            onMouseOver={() => setMenuId(item.id)}
-                                                            onMouseLeave={() => setMenuId(null)}
-                                                        >
-                                                            <div className="relative">
-                                                                {item.title}
-                                                                { (menuId === item.id) && <SubMenu links={item.submenu} /> }
+                            links.map((item,i) => {
+                                return  <div key={i}>
+                                        {
+                                            item.submenu
+                                                ?   <li 
+                                                        onMouseOver={() => setMenuId(item.id)}
+                                                        onMouseLeave={() => setMenuId(null)}
+                                                    >
+                                                        <div className="relative">
+                                                            {item.title}
+                                                            { (menuId === item.id) && <SubMenu links={item.submenu} /> }
 
-                                                            </div>
-                                                        </li>
-                                                    :   <li><a href={item.url}>{item.title}</a></li>
-                                            }
-                                        </>
+                                                        </div>
+                                                    </li>
+                                                :   <li><a href={item.url}>{item.title}</a></li>
+                                        }
+                                        </div>
                             })
                     }
                 </nav>
