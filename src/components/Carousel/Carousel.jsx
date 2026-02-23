@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Carousel = ({ slides }) => {
     const [current, setCurrent] = useState(0);
@@ -20,6 +20,14 @@ const Carousel = ({ slides }) => {
             setCurrent((prev) => (prev - 1) % 100);
         }
     }
+
+    useEffect(() => {
+        const autoplay = setInterval(() => {
+            handleNext();
+        },3000);
+
+        return () => clearInterval(autoplay);
+    },[current])
 
     return (
         <div className="carousel overflow-hidden w-full">
