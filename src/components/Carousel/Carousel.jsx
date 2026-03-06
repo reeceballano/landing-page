@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Carousel = ({ slides }) => {
+const Carousel = ({ slides, columns }) => {
     const [current, setCurrent] = useState(0);
 
     const handleNext = () => {
@@ -36,13 +36,16 @@ const Carousel = ({ slides }) => {
                 <button onClick={() => handleNext()}>Next</button>
             </div>
             <div 
-                className="carousel-item flex transition-all delay-75 ease-in-out duration-500"
-                style={{ transform: `translateX(-${current * 100}%)` }}
+                className="carousel-item flex gap-5 transition-all delay-75 ease-in-out duration-500"
             >
                 {
                     slides &&
                         slides.map(slide => {
-                            return <img className="w-full" key={slide} src={slide} />
+                            return <div key={slide} className="w-1/3"
+                                    style={{ transform: `translateX(-${current * 100}%)` }}
+                                >
+                                <img className="w-full" key={slide} src={slide} />
+                            </div>
                         })
                 }
             </div>
