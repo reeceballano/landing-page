@@ -36,12 +36,12 @@ const Carousel = ({ slides, columns }) => {
                 <button onClick={() => handleNext()}>Next</button>
             </div>
             <div 
-                className="carousel-item flex gap-5 transition-all delay-75 ease-in-out duration-500"
+                className="carousel-item flex gap-5"
             >
                 {
                     slides &&
                         slides.map(slide => {
-                            return <div key={slide} className="w-1/3"
+                            return <div key={slide} className="w-1/3 transition-all delay-75 ease-in-out duration-500"
                                     style={{ transform: `translateX(-${current * 100}%)` }}
                                 >
                                 <img className="w-full" key={slide} src={slide} />
