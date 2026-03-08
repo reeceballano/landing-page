@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 const Carousel = ({ slides, columns }) => {
     const [current, setCurrent] = useState(0);
 
+    const renderedSlides = (slides.length <= 3) ? [...slides, ...slides, ...slides] : slides;
+
     const handleNext = () => {
         console.log('next');
         if(current == slides.length - 1) { 
@@ -36,15 +38,15 @@ const Carousel = ({ slides, columns }) => {
                 <button onClick={() => handleNext()}>Next</button>
             </div>
             <div 
-                className="carousel-item flex gap-5"
+                className="carousel-item flex flex-nowrap gap-5"
             >
                 {
                     slides &&
-                        slides.map(slide => {
-                            return <div key={slide} className="w-1/3 transition-all delay-75 ease-in-out duration-500"
+                        renderedSlides.map((slide,i) => {
+                            return <div key={i} className="w-1/3 shrink-0 transition-all delay-75 ease-in-out duration-500"
                                     style={{ transform: `translateX(-${current * 100}%)` }}
                                 >
-                                <img className="w-full" key={slide} src={slide} />
+                                <img className="w-full" key={i} src={slide} />
                             </div>
                         })
                 }
