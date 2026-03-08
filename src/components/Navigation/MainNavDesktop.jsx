@@ -37,6 +37,7 @@ const MainNavDesktop = () => {
                                         {
                                             item.submenu
                                                 ?   <li 
+                                                        key={i}
                                                         onMouseOver={() => setMenuId(item.id)}
                                                         onMouseLeave={() => setMenuId(null)}
                                                     >
@@ -46,7 +47,7 @@ const MainNavDesktop = () => {
 
                                                         </div>
                                                     </li>
-                                                :   <li><a href={item.url}>{item.title}</a></li>
+                                                :   <li key={i}><a href={item.url}>{item.title}</a></li>
                                         }
                                         </div>
                             })

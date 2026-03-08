@@ -4,9 +4,9 @@ const SubMenu = ({ links }) => {
             <div className="bg-slate-200/95 p-5 min-w-60 rounded mt-5">
                 {
                     links.length &&
-                        links.map(item => {
+                        links.map((item, i) => {
                             return  (
-                                <>
+                                <div key={i}>
                                     { item.submenu 
                                         ?  <li className="border-b border-slate-300 mb-2 pb-2">
                                                 {item.title}<SubMenu links={item.submenu} />
@@ -15,7 +15,7 @@ const SubMenu = ({ links }) => {
                                                 <a href="#">{item.title}</a>
                                             </li>
                                     }
-                                </>
+                                </div>
                             )
                         })
                 }
