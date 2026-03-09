@@ -64,7 +64,7 @@ const App = () => {
             </Section>
             <div className="h-screen">
                 <Container>
-                    <Carousel slides={slides} autoPlay interval={4000} />
+                    <Carousel slides={slides} columns={3} autoPlay interval={4000} />
                 </Container>
             </div>
         </div>

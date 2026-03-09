@@ -3,7 +3,26 @@ import { useEffect, useState } from "react";
 const Carousel = ({ slides, columns }) => {
     const [current, setCurrent] = useState(0);
 
-    const renderedSlides = (slides.length <= 3) ? [...slides, ...slides, ...slides] : slides;
+    const renderedSlides = (slides.length <= 3) ? [...slides, ...slides, ...slides] : slides; 
+
+    const itemsPerSlide = () => {
+        switch(columns) {
+            case 1 :
+                return 'w-full';
+            case 2:
+                return 'w-1/2';
+            case 3: 
+                return 'w-1/3';
+            case 4:
+                return 'w-1/4';
+            case 5:
+                return 'w-1/5';
+            case 6:
+                return 'w-1/6';
+            default:
+                return 'w-full';
+        }
+    }
 
     const handleNext = () => {
         console.log('next');
@@ -43,8 +62,10 @@ const Carousel = ({ slides, columns }) => {
                 {
                     slides &&
                         renderedSlides.map((slide,i) => {
-                            return <div key={i} className="w-1/3 shrink-0 transition-all delay-75 ease-in-out duration-500"
-                                    style={{ transform: `translateX(-${current * 100}%)` }}
+                            return <div 
+                                        key={i} 
+                                        className={`${itemsPerSlide()} shrink-0 transition-all delay-75 ease-in-out duration-500`}
+                                        style={{ transform: `translateX(-${current * 100}%)` }}
                                 >
                                 <img className="w-full" key={i} src={slide} />
                             </div>
