@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 
 const Carousel = ({
     slides = [],
+    showControls = false,
     columns = 1,
     renderSlide,          // (slide, index) => JSX  — custom slide renderer
     autoplayDelay = 3000, // set to null/0 to disable autoplay
@@ -37,6 +38,7 @@ const Carousel = ({
         <div className="carousel w-full">
 
             {/* Navigation */}
+            { showControls &&
             <div className="flex gap-2 mb-4">
                 <button
                     onClick={handlePrev}
@@ -51,6 +53,7 @@ const Carousel = ({
                     Next
                 </button>
             </div>
+            }
 
             {/* Track */}
             <div className="overflow-hidden w-full">
@@ -75,6 +78,7 @@ const Carousel = ({
             </div>
 
             {/* Dots */}
+            { showControls &&
             <div className="flex justify-center gap-2 mt-4">
                 {slides.map((_, i) => (
                     <button
@@ -87,7 +91,7 @@ const Carousel = ({
                     />
                 ))}
             </div>
-
+            }
         </div>
     );
 };
