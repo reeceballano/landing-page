@@ -62,11 +62,33 @@ const App = () => {
                     </div>
                 </Container>
             </Section>
-            <div className="h-screen">
-                <Container>
-                    <Carousel slides={slides} columns={3} autoPlay interval={4000} />
+            <Section>
+                <Container classes={"md:flex gap-10"}>
+                    <div className="flex-1">
+                        <h1 className="text-5xl/15 md:text-5xl/17 font-light mb-2 text-left">Get in touch!</h1>
+                        <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-left">One call away!</h3>
+                    </div>
+
+                    <div className="flex-1">
+                        <form className="flex flex-col gap-3">
+                            <input className="placeholder:text-slate-400 py-3 px-5 border border-slate-700 rounded" type="text" placeholder="Name" />
+                            <input className="placeholder:text-slate-400 py-3 px-5 border border-slate-700 rounded" type="email" placeholder="Email" />
+                            <textarea className="placeholder:text-slate-400 py-3 px-5 border border-slate-700 rounded" placeholder="Message"></textarea>
+                            <div className="hero-buttons flex justify-end gap-5 mt-5">
+                                <button className="bg-slate-800 px-6 py-4 rounded text-white uppercase tracking-wide text-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </Container>
-            </div>
+            </Section>
+
+            <Section>
+                <div className="h-screen">
+                    <Container>
+                        <Carousel slides={slides} columns={3} autoPlay interval={4000} />
+                    </Container>
+                </div>
+            </Section>
         </div>
     )
 }
