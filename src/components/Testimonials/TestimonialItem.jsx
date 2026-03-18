@@ -6,8 +6,8 @@ const TestimonialItem = ({ testimonial }) => {
     return (
         <Card>
             <p className="text-slate-500 font-light text-xl/7 italic">{text}</p>
-            <span className={`text-md mt-5 text-white`}>{name}</span>
-            <span className={`text-xs text-slate-50`}>{company}</span>
+            <span className={`text-md mt-5 text-slate-800`}>{name}</span>
+            <span className={`text-xs text-slate-500`}>{company}</span>
         </Card>
     )
 }

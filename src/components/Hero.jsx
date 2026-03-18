@@ -1,7 +1,14 @@
+import Carousel from "./Carousel/Carousel";
 import Container from "./Container";
 import Section from "./Section";
 
 const Hero = ({ hero, children }) => {
+    const slides = [
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+        "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+    ];
+
     return (
         <Section classes="md:min-h-[calc(100dvh-100px)] mt-[100px] flex items-center">
             <Container>
@@ -17,7 +24,7 @@ const Hero = ({ hero, children }) => {
                         </div>
 
                         <div className="hero-editor md:flex-1">
-                            editor
+                            <Carousel slides={slides} columns={1} autoPlay interval={4000} />
                         </div>
                     </div>
                     
