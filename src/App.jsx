@@ -42,7 +42,6 @@ const App = () => {
 
                     <div className="md:mx-auto mt-11">
                         <Blurbs />
-                        <Blurbs />
                     </div>
                 </Container>
             </Section>
@@ -50,7 +49,7 @@ const App = () => {
             <Section classes={"bg-slate-50"}>
                 <Container>
                     <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">Clients Testimonials</h1>
-                    <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>
+                    <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">Real Stories, Real Results</h3>
                     
                     <div className="mt-11">
                         <Testimonials />
@@ -62,7 +61,7 @@ const App = () => {
                     <div className="flex-1">
                         <h4 className="text-xs uppercase text-gray-300 font-semibold tracking-wider">Free Consultation</h4>
                         <h1 className="text-white text-upper text-5xl/15 md:text-5xl/20 font-semibold mb-2 text-left ">Get in touch!</h1>
-                        <p className="text-xl/9 md:text-lg/7 text-gray-300 font-light text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inciHdidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        <p className="text-xl/9 md:text-lg/7 text-gray-300 font-light text-left">We’d love to hear from you! Whether you have a question, feedback, or just want to learn more about what we offer, our team is here to help. Reach out to us anytime and we’ll make sure to respond as quickly as possible with the information or support you need.</p>
                         <div className="my-8">
                             <div className="flex items-center gap-3 my-3">
                                 <div className={"p-1 inline-block border border-neutral-600 bg-neutral-700"}>
