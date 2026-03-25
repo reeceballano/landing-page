@@ -9,8 +9,26 @@ import laptop from "../src/assets/images/laptop.jpg";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Carousel from "./components/Carousel/Carousel";
 import CustomIcon from "./components/CustomIcon";
+import Input from "./components/Input";
+import { useState } from "react";
 
 const App = () => {
+    const [userData, setUserData] = useState({
+        firstname: '',
+        lastname: '',
+        email: '',
+    })
+
+    const handleOnchange = (e) => {
+        const { name, value } = e.target;
+        console.log('name', e)
+        setUserData((prev) => ({
+            ...prev,
+            [name]: value
+        }))
+
+    }
+
     return (
         <div className="app">
             <Header />
@@ -101,6 +119,28 @@ const App = () => {
                             </div>
                         </form>
                     </div>
+                </Container>
+            </Section>
+
+            <Section classes="hidden">
+                <Container>
+                    {JSON.stringify(userData)}
+                    {
+                        Object.keys(userData).map((name,i) => {
+                            return  (
+                                <Input 
+                                    key={i}
+                                    name={name}
+                                    type="text"
+                                    label={name}
+                                    placeholder={name}
+                                    value={userData[name]}
+                                    id={userData[name]}
+                                    onChange={handleOnchange}
+                                />
+                            )
+                        })
+                    }
                 </Container>
             </Section>
         </div>
