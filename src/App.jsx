@@ -14,9 +14,10 @@ import { useState } from "react";
 
 const App = () => {
     const [userData, setUserData] = useState({
-        firstname: '',
-        lastname: '',
+        name: '',
         email: '',
+        phone: '',
+        message: ''
     })
 
     const handleOnchange = (e) => {
@@ -107,13 +108,47 @@ const App = () => {
                     <div className="flex-1">
                         <form className="flex flex-col gap-3 bg-white p-7">
                             <h4 className="text-xs uppercase text-gray-600 font-semibold tracking-wider mb-3">Request Appointment</h4>
-                            <input className="placeholder:text-slate-400 py-3 px-5 border border-slate-700" type="text" placeholder="Name" />
+                            <Input 
+                                name={'name'}
+                                type="text"
+                                label={'Name'}
+                                placeholder={'Name'}
+                                value={userData.name}
+                                id={userData.name}
+                                onChange={handleOnchange}
+                            />
                             <div className="flex flex-col md:flex-row gap-3">
-                                <input className="placeholder:text-slate-400 py-3 px-5 border border-slate-700 w-full flex-none md:flex-1" type="email" placeholder="Email" />
-                                <input className="placeholder:text-slate-400 py-3 px-5 border border-slate-700 w-full flex-none md:flex-1" type="phone" placeholder="Phone" />
-
+                                <Input 
+                                    name={'email'}
+                                    type="email"
+                                    label={'Email'}
+                                    placeholder={'Email'}
+                                    value={userData.email}
+                                    id={userData.email}
+                                    onChange={handleOnchange}
+                                    classes={'flex-none md:flex-1'}
+                                />
+                                <Input 
+                                    name={'phone'}
+                                    type="phone"
+                                    label={'Phone'}
+                                    placeholder={'Phone'}
+                                    value={userData.phone}
+                                    id={userData.phone}
+                                    onChange={handleOnchange}
+                                    classes={'flex-none md:flex-1'}
+                                />
                             </div>
-                            <textarea className="placeholder:text-slate-400 py-3 px-5 border border-slate-700" placeholder="Message"></textarea>
+                            <Input 
+                                name={'message'}
+                                type="textarea"
+                                label={'Message'}
+                                placeholder={'Message'}
+                                value={userData.message}
+                                id={userData.message}
+                                onChange={handleOnchange}
+                                classes={'flex-none md:flex-1'}
+                            />
                             <div className="hero-buttons flex justify-end gap-5 mt-5">
                                 <button className="bg-slate-800 px-6 py-4 rounded text-white uppercase tracking-wide text-sm max-sm:w-full">Send Message</button>
                             </div>
