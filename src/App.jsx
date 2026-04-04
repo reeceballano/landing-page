@@ -11,6 +11,7 @@ import Carousel from "./components/Carousel/Carousel";
 import CustomIcon from "./components/CustomIcon";
 import Input from "./components/Input";
 import { useState } from "react";
+import Button from "./components/Button";
 
 const App = () => {
     const [userData, setUserData] = useState({
@@ -47,7 +48,10 @@ const App = () => {
                             <h2 className="text-5xl/15 md:text-5xl/17  font-light mb-2">Coded by Human!</h2>
                             <p className="text-xl/9 md:text-xl/7 text-slate-600 font-light ">The development process emphasized understanding the problem deeply before implementing solutions. Challenges were addressed through analysis, iteration, and hands-on debugging, ensuring that the final result is both reliable and maintainable.</p>
                             <div className="hero-buttons flex justify-center md:justify-self-start gap-5 mt-10">
-                                <button className="bg-slate-800 px-6 py-4 rounded text-white uppercase tracking-wide text-lg">Explore Codebase</button>
+                                <Button 
+                                    text="Explore Codebase"
+                                    type="button"
+                                />
                             </div>
                         </div>
                     </div>
@@ -150,6 +154,7 @@ const App = () => {
                                 classes={'flex-none md:flex-1'}
                             />
                             <div className="hero-buttons flex justify-end gap-5 mt-5">
+                                <Button></Button>
                                 <button className="bg-slate-800 px-6 py-4 rounded text-white uppercase tracking-wide text-sm max-sm:w-full">Send Message</button>
                             </div>
                         </form>
