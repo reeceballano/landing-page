@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Carousel from "./Carousel/Carousel";
 import Container from "./Container";
 import Section from "./Section";
@@ -18,8 +19,17 @@ const Hero = ({ hero, children }) => {
                             <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center md:text-left">With sharp instincts and lightning-fast problem-solving, this ninja developer transforms tricky challenges into clean, scalable, and reliable solutions.</h3>
 
                             <div className="hero-buttons flex flex-col md:flex-row justify-center md:justify-self-start gap-5 mt-8">
-                                <button className="bg-slate-800 hover:bg-slate-900 active:bg-slate-700 px-6 py-4 rounded text-white uppercase tracking-wide text-lg cursor-pointer">Explore Codebase</button>
-                                <button className="bg-green-500 hover:bg-green-600 active:bg-green-400 px-6 py-4 rounded text-white uppercase tracking-wider text-lg cursor-pointer">Contact</button>
+                                <Button 
+                                    type="button"
+                                    text="Explore Codebase"
+                                    classes="hover:bg-slate-900 active:bg-slate-700"
+                                />
+                                
+                                <Button 
+                                    type="button"
+                                    text="Contact Us"
+                                    classes="!bg-green-500 hover:!bg-green-600 active:!bg-green-400"
+                                />
                             </div>
                         </div>
 
