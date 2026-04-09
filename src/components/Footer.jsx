@@ -129,7 +129,13 @@ const Footer = () => {
                         })
                     }
                 </Container>
-            </Section>      
+            </Section>     
+
+            <Section classes={"!py-2 bg-stone-900"}>
+                <Container classes={"!py-0 max-sm:text-center"}>
+                    <small className="text-neutral-600">Website Designed by rballano. All Rights Reserved</small>
+                </Container>
+            </Section>
         </>
     )
 }
