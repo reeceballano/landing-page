@@ -8,18 +8,57 @@ import Blurbs from "../components/Blurb/Blurbs";
 import laptop from "../assets/images/laptop.jpg";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Button from "../components/Button";
+import heroVideo from "../assets/videos/hero-video-2-output.mp4";
+import { useMediaQuery } from "react-responsive";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 
 const Home = () => {
+    const videoRef = useRef();
+
+    const isMobile = useMediaQuery({ maxWidth: 767});
+
+    useGSAP(() => {
+        //VIDEO ANIMATION
+        const startValue = isMobile ? 'top 10%' : 'center 50%';
+        const endValue = isMobile ? '120% top' : 'bottom top';
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.cta-section',
+                start: startValue,
+                end: endValue,
+                scrub: true,
+                pin: true
+            }
+        })
+
+        videoRef.current.onloadedmetadata = () => {
+            tl.to(videoRef.current, {
+                currentTime: videoRef.current.duration
+            })
+        }
+    }, [])
+
     return (
         <div className="homepage">
             <Hero />
             <Marquee />
             
-            <Section bg="bg-white">
+            <Section classes="cta-section" bg="bg-white">
                 <Container classes={"bg-stone-50 rounded-lg"}>
                     <div className="image-text flex flex-col md:flex-row gap-9">
                         <div className="image-container md:w-2/5">
-                            <img className="rounded-lg" src={laptop} alt="laptop" />
+                            {/* <img className="rounded-lg" src={laptop} alt="laptop" /> */}
+                            <video
+                                className="w-full" 
+                                ref={videoRef}
+                                src={heroVideo}
+                                muted
+                                playsInline
+                                preload="auto"
+                            />
                         </div>
 
                         <div className="text-container flex-2 justify-center items-center">
@@ -36,7 +75,7 @@ const Home = () => {
                 </Container>
             </Section>
             
-            <Section>
+            <Section classes="blurbs">
                 <Container>
                     <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">We Deliver Results</h1>
                     <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>

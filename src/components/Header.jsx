@@ -5,8 +5,44 @@ import { useState } from "react";
 import SubMenu from "./Navigation/SubMenu";
 import MainNavDesktop from "./Navigation/MainNavDesktop";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { getUnit } from "gsap/all";
+
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    useGSAP(() => {
+        // const navTween = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: '.main-header',
+        //         start: 'top top',
+        //         onEnter: () => {
+        //             gsap.to('.main-header', {
+        //                 backgroundColor: '#ffffffb3',
+        //                 backgroundFilter:'blur(10px)',
+        //                 duration: 1,
+        //                 ease: 'power1.inOut'
+        //             })
+        //         },
+        //         onLeaveBack: () => {
+        //             gsap.to('.main-header', { backgroundColor: 'transparent'})
+        //         }
+        //     }
+        // });
+
+        // navTween.fromTo('.main-header', 
+        //     { 
+        //         backgroundColor: 'transparent'
+        //     }, 
+        //     {
+        //         backgroundColor: 'red',
+        //         backgroundFilter:'blur(10px)',
+        //         duration: 1,
+        //         ease: 'power1.inOut'
+        //     }
+        // )
+    })
 
     return (
         <section className="main-header border-b border-slate-100 fixed top-0 bg-slate-50/96 w-full z-50">
