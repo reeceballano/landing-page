@@ -4,29 +4,29 @@ import gsap from "gsap";
 
 const Blurbs = ({ blurbs }) => {
     useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.blurbs',
-                markers: true,
-                start: 'center 05%',
-                end: 'top -50%',
-                scrub: true,
-                // pin: true
-            }
-        })
+        // const tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: '.blurbs',
+        //         markers: true,
+        //         start: 'center 05%',
+        //         end: 'top 50%',
+        //         scrub: true,
+        //         // pin: true
+        //     }
+        // })
 
-        gsap.utils.toArray('.blurb').forEach((box) => {
-            tl.from(box, 
-                {
-                    // backgroundColor: 'green',
-                    y: 100,
-                    opacity: 0,
-                    duration: 0.5,
-                    ease: 'expo.inOut',
-                    toggleActions: "reverse"
-                }
-            )
-        })
+        // gsap.utils.toArray('.blurb').forEach((box) => {
+        //     tl.from(box, 
+        //         {
+        //             // backgroundColor: 'green',
+        //             y: 100,
+        //             opacity: 0,
+        //             duration: 0.5,
+        //             ease: 'expo.inOut',
+        //             // toggleActions: "reverse"
+        //         }
+        //     )
+        // })
     },[])
 
     blurbs = [

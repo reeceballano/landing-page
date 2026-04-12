@@ -7,6 +7,30 @@
 }
 
 
+/**
+    TYPING ANIMATION
+*/
+.typing-cursor {
+    animation: cursorBlink 0.5s alternate infinite;
+}
+
+@keyframes cursorBlink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+/**
+    MARQUEE ANIMATION
+*/
 @keyframes marquee {
     0% {
         transform: translateX(0%);

@@ -13,6 +13,10 @@ import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 const Home = () => {
     const videoRef = useRef();
@@ -39,6 +43,19 @@ const Home = () => {
                 currentTime: videoRef.current.duration
             })
         }
+
+        gsap.to('.write', {
+            delay: 3,
+            text: {
+                value: "The development process emphasized understanding the problem deeply before implementing solutions. Challenges were addressed through analysis, iteration, and hands-on debugging, ensuring that the final result is both reliable and maintainable."
+            },
+            scrollTrigger: {
+                trigger: '.typing-cursor',
+                start: 'center 50%',
+                end: 'center top',
+                scrub: true,
+            }
+        })
     }, [])
 
     return (
@@ -63,7 +80,7 @@ const Home = () => {
 
                         <div className="text-container flex-2 justify-center items-center">
                             <h2 className="text-5xl/15 md:text-5xl/17  font-light mb-2">Coded by Human!</h2>
-                            <p className="text-xl/9 md:text-xl/7 text-slate-600 font-light ">The development process emphasized understanding the problem deeply before implementing solutions. Challenges were addressed through analysis, iteration, and hands-on debugging, ensuring that the final result is both reliable and maintainable.</p>
+                            <span className="write text-xl/9 md:text-xl/7 text-slate-600 font-light"></span><span className="ml-1 typing-cursor font-extrabold">__</span>
                             <div className="hero-buttons flex justify-center md:justify-self-start gap-5 mt-10">
                                 <Button 
                                     text="Explore Codebase"
