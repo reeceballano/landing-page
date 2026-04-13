@@ -4,6 +4,25 @@ import gsap from "gsap";
 
 const Blurbs = ({ blurbs }) => {
     useGSAP(() => {
+        const scrollTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.blurbs-section',
+                start: 'top 10%',
+                end: 'center 80%',
+                // scrub: true,
+                // toggleActions: 'reverse',
+                // markers: true,
+            }
+        })
+
+        scrollTimeline.from('.blurb', {
+            opacity: 0,
+            // duration: 1,
+            ease: 'power1.inOut',
+            stagger: 1,
+            // backgroundColor: 'green'
+        },'-=0.5')
+
         // const tl = gsap.timeline({
         //     scrollTrigger: {
         //         trigger: '.blurbs',

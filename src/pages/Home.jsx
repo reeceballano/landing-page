@@ -26,7 +26,7 @@ const Home = () => {
     useGSAP(() => {
         //VIDEO ANIMATION
         const startValue = isMobile ? 'top 10%' : 'center 50%';
-        const endValue = isMobile ? '120% top' : 'bottom top';
+        const endValue = isMobile ? '120% top' : 'bottom 10%';
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -34,7 +34,8 @@ const Home = () => {
                 start: startValue,
                 end: endValue,
                 scrub: true,
-                pin: true
+                pin: true,
+                // markers: true
             }
         })
 
@@ -92,7 +93,7 @@ const Home = () => {
                 </Container>
             </Section>
             
-            <Section classes="blurbs">
+            <Section classes="blurbs-section">
                 <Container>
                     <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">We Deliver Results</h1>
                     <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>
