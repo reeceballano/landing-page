@@ -24,7 +24,7 @@ const Footer = () => {
 
     return (
         <>
-            <Section classes={"bg-black"}>
+            <Section classes={"bg-slate-950"}>
                 <Container classes={"md:flex gap-10"}>
                     <div className="flex-1">
                         <h4 className="text-xs uppercase text-gray-300 font-semibold tracking-wider">Free Consultation</h4>
@@ -131,9 +131,9 @@ const Footer = () => {
                 </Container>
             </Section>     
 
-            <Section classes={"!py-2 bg-stone-900"}>
+            <Section classes={"!py-2 bg-slate-950"}>
                 <Container classes={"!py-0 max-sm:text-center"}>
-                    <small className="text-neutral-600">Website Designed by rballano. All Rights Reserved</small>
+                    <small className="text-slate-700">Website Designed by rballano. All Rights Reserved</small>
                 </Container>
             </Section>
         </>
