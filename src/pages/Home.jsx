@@ -80,7 +80,7 @@ const Home = () => {
                         </div>
 
                         <div className="text-container flex-2 justify-center items-center">
-                            <h2 className="text-5xl/15 md:text-5xl/17  font-light mb-2">Coded by Human!</h2>
+                            <h2 className="text-5xl/15 md:text-5xl/17 font-light mb-2">Coded by Human!</h2>
                             <span className="write text-xl/9 md:text-xl/7 text-slate-600 font-light"></span><span className="ml-1 typing-cursor font-extrabold">__</span>
                             <div className="hero-buttons flex justify-center md:justify-self-start gap-5 mt-10">
                                 <Button 
