@@ -41,20 +41,20 @@ const Hero = ({ hero, children }) => {
             <Container>
                     <div className="flex md:flex-row flex-col justify-center items-center_ gap-18">
                         <div className="hero-content md:flex-1">
-                            <h1 className="hero-title text-xl/15 md:text-7xl/18 tracking-tight font-light mb-7 text-center md:text-left">Your Codebase's <span className="text-green-400">Secret Weapon.</span></h1>
+                            <h1 className="hero-title text-5xl/13 md:text-7xl/18 tracking-tight font-light mb-7 md:text-left">Your Codebase's <span className="text-green-400">Secret Weapon.</span></h1>
                             <h3 className="hero-description text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center md:text-left">With sharp instincts and lightning-fast problem-solving, this ninja developer transforms tricky challenges into clean, scalable, and reliable solutions.</h3>
 
                             <div className="hero-buttons flex flex-col md:flex-row justify-center md:justify-self-start gap-5 mt-8">
                                 <Button 
                                     type="button"
                                     text="Explore Codebase"
-                                    classes="hover:bg-slate-900 active:bg-slate-700"
+                                    classes="max-sm:w-full hover:bg-slate-900 active:bg-slate-700"
                                 />
                                 
                                 <Button 
                                     type="button"
                                     text="Contact Us"
-                                    classes="!bg-green-500 hover:!bg-green-600 active:!bg-green-400"
+                                    classes="max-sm:w-full !bg-green-500 hover:!bg-green-600 active:!bg-green-400"
                                 />
                             </div>
                         </div>

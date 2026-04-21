@@ -93,9 +93,9 @@ const Home = () => {
                 </Container>
             </Section>
             
-            <Section classes="blurbs-section">
+            <Section classes="blurbs-section max-sm:mt-34">
                 <Container>
-                    <h1 className="text-5xl/15 md:text-5xl/17  font-light mb-2 text-center">We Deliver Results</h1>
+                    <h1 className="text-5xl/15 md:text-5xl/17 font-light mb-2 text-center">We Deliver Results</h1>
                     <h3 className="text-xl/9 md:text-2xl/9 text-slate-600 font-light text-center">We are a team of ninjas!</h3>
 
                     <div className="md:mx-auto mt-11">
